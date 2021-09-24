@@ -27,7 +27,7 @@ public class TelaPrincipal {
 	public static boolean exiContinuarComprando = false;
 	public static boolean fecharALoja			= false;
 	
-	// métodos úteis
+	// mÃ©todos Ãºteis
 	public static void esperaUmPouco(int ms)
 	{
 	 	try {
@@ -87,7 +87,7 @@ public class TelaPrincipal {
 		op = leia.next();
 		if (!op.toLowerCase().equals("s") && !op.toLowerCase().equals("n"))
 		{
-			System.out.println("OPÇÃO INVÁLIDA!");
+			System.out.println("OPÃ‡ÃƒO INVÃ�LIDA!");
 			esperaUmPouco(3000);	
 			return (-1);
 		}
@@ -103,13 +103,13 @@ public class TelaPrincipal {
 			
 			Limpador.limpa();
 			mostrarBanner();
-			System.out.println("\n\n        *******************ATÉ BREVE!******************");
+			System.out.println("\n\n        *******************ATÃ‰ BREVE!******************");
 		}
 		return (2);
 	}
 	
 	
-	// coração do programa
+	// coraÃ§Ã£o do programa
 	public static void main(String[] args) throws InterruptedException {
 		
 		// vars -> global
@@ -138,12 +138,12 @@ public class TelaPrincipal {
 		carrinho = new ArrayList<Produto>();
 		produtos = new ArrayList<Produto>();
 		produtos.add(new Produto("G1-1", "Notebook Acer Gamer ", 4700, 10));
-		produtos.add(new Produto("G1-2", "Smart TV LG 55´	", 2799, 10));
+		produtos.add(new Produto("G1-2", "Smart TV LG 55Â´	", 2799, 10));
 		produtos.add(new Produto("G1-3", "Monitor 4k 32'	", 2500, 10));
 		produtos.add(new Produto("G1-4", "Smartphone Motorola", 1799, 10));
 		produtos.add(new Produto("G1-5", "Cadeira gamer Thunderx3", 1500, 10));
 		produtos.add(new Produto("G1-6", "Drone DGI	", 5300, 10));
-		produtos.add(new Produto("G1-7", "Xbox Séries S	", 2518, 10));
+		produtos.add(new Produto("G1-7", "Xbox SÃ©ries S	", 2518, 10));
 		produtos.add(new Produto("G1-8", "Apple watch series 3", 1500, 10));
 		produtos.add(new Produto("G1-9", "Playstation 4	", 2799, 10));
 		produtos.add(new Produto("G1-10", "Projetor 4k LG	", 7000, 10));
@@ -167,16 +167,16 @@ public class TelaPrincipal {
 			System.out.print("\n\n");
 			mostrarBanner();
 			// 1) Mostrar Produtos
-			System.out.println("CÓDIGO\tPRODUTO\t\t\t\tPREÇO\t\tESTOQUE");
-			System.out.print("▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍\n");
+			System.out.println("CÃ“DIGO\tPRODUTO\t\t\t\tPREÃ‡O\t\tESTOQUE");
+			System.out.print("â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�\n");
 			if (exibirLista(produtos) == 0)					
 			{
 				System.out.println("\n\n");				
 				Limpador.limpa();
 				mostrarBanner();
-				System.out.println("ATENÇÃO! TODOS OS PRODUTOS FORAM COMPRADOS!");
+				System.out.println("ATENÃ‡ÃƒO! TODOS OS PRODUTOS FORAM COMPRADOS!");
 				esperaUmPouco(3000);
-				System.out.println("VOCÊ SERÁ REDIRECIONAD(A/O/E) PARA ESCOLHER A FORMA DE PAGAMENTO!");
+				System.out.println("VOCÃŠ SERÃ� REDIRECIONAD(A/O/E) PARA ESCOLHER A FORMA DE PAGAMENTO!");
 				esperaUmPouco(1500);
 				Limpador.limpa();
 				fecharALoja = true;
@@ -186,35 +186,35 @@ public class TelaPrincipal {
 			// 2) Mostrar Carrinho
 			if (!fecharALoja)
 			{
-				System.out.print("▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍▍\n");
+				System.out.print("â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�â–�\n");
 				System.out.println("\nCARRINHO:");
 				
 				exibirLista(carrinho);		
 				System.out.println("\n\n");		
 			}
 			
-			// 3) Perguntando o Código do Produto
+			// 3) Perguntando o CÃ³digo do Produto
 			boolean jaTaNoCarrinho = false;
 			int		indiceJaTaNoCarrinho = 0;
 			
 			while (pedindoCodigo) {
-				System.out.print("DIGITE O CÓDIGO DO PRODUTO: ");
+				System.out.print("DIGITE O CÃ“DIGO DO PRODUTO: ");
 				codigoDigitado = leia.next();
 				indiceProdutoDigitado = esseCodigoExiste(codigoDigitado, produtos);
 				i = Integer.parseInt(indiceProdutoDigitado);
 				if (indiceProdutoDigitado.equals("-1"))
 				{
-					System.out.println("CÓDIGO INVÁLIDO!\n");
+					System.out.println("CÃ“DIGO INVÃ�LIDO!\n");
 					pedindoCodigo = true;
 				}
 				else 
 				{
-					// verificar se o produto já está no carrinho
+					// verificar se o produto jÃ¡ estÃ¡ no carrinho
 					if (carrinho.size() > 0)
 					{
 						for (int linha = 0; linha < carrinho.size(); linha++)
 						{
-							if (carrinho.get(linha).getCodProduto().toLowerCase().equals(codigoDigitado.toLowerCase())) // se produto já está no carrinho
+							if (carrinho.get(linha).getCodProduto().toLowerCase().equals(codigoDigitado.toLowerCase())) // se produto jÃ¡ estÃ¡ no carrinho
 							{
 								jaTaNoCarrinho = true;
 								indiceJaTaNoCarrinho = linha;
@@ -230,7 +230,7 @@ public class TelaPrincipal {
 					
 					if (!jaTaNoCarrinho || carrinho.size() == 0)
 					{
-						// se o carrinho for vazio, ou se o produto que eu to tentando comprar não estiver
+						// se o carrinho for vazio, ou se o produto que eu to tentando comprar nÃ£o estiver
 						Produto newp = new Produto(produtos.get(i).getCodProduto(), produtos.get(i).getNomeProduto(), produtos.get(i).getPreco(), produtos.get(i).getQtdEstoque());
 						carrinho.add(newp);
 						carrinho.get(carrinho.size() - 1).seteCarrinho(true);
@@ -241,13 +241,13 @@ public class TelaPrincipal {
 			
 			// 4) Perguntando a Quantidade do Produto
 			while (pedindoQuantidade) {
-				System.out.print("DIGITE A QUANTIDADE QUE VOCÊ DESEJA: ");
+				System.out.print("DIGITE A QUANTIDADE QUE VOCÃŠ DESEJA: ");
 				quantidadeDigitada = leia.next();			
 				
 				if (!eUmNumero(quantidadeDigitada))
-					System.out.println("INFORME A QUANTIDADE UTILIZANDO APENAS NÚMEROS DE 1 A 9!");
+					System.out.println("INFORME A QUANTIDADE UTILIZANDO APENAS NÃšMEROS DE 1 A 9!");
 				else if (!produtos.get(i).temNoEstoque(Integer.parseInt(quantidadeDigitada)))
-					System.out.println("QUANTIDADE INVÁLIDA NO ESTOQUE!");
+					System.out.println("QUANTIDADE INVÃ�LIDA NO ESTOQUE!");
 				else
 				{
 					pedindoQuantidade = false;
@@ -273,7 +273,7 @@ public class TelaPrincipal {
 				// 8) e mostrar o continuar comprando	
 				exibirContinuarComprando();
 				
-				// 9) se N vai para forma de pagamento, se S, recomeça as compras
+				// 9) se N vai para forma de pagamento, se S, recomeÃ§a as compras
 				do
 				{
 					int r = opContinuarComprandoDigitadaEValida(2);
@@ -298,7 +298,7 @@ public class TelaPrincipal {
 		// 12) Loja Fechada
 	Limpador.limpa();
 		mostrarBanner();
-		System.out.print("\t\t LOJA FECHADA, VOLTE OUTRO DIA\n");
+		System.out.print("\t\t LOJA FECHADA, VOLTE OUTRO DIA\n"); //
 		
 	}
 }
