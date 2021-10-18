@@ -1,4 +1,4 @@
-package generation.org.blogPessoal.controller;
+package com.generation.lojaGames.controller;
 
 import java.util.List;
 
@@ -15,47 +15,51 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import generation.org.blogPessoal.model.Tema;
-import generation.org.blogPessoal.repository.TemaRepository;
+import com.generation.lojaGames.model.Produto;
+import com.generation.lojaGames.repository.ProdutoRepository;
 
 @RestController
+@RequestMapping("/produtos")
 @CrossOrigin(origins = "*", allowedHeaders = "*")
-@RequestMapping("/tema")
-public class TemaController {
-	
+public class ProdutoController {
+
 	@Autowired
-	private TemaRepository repository;
-	
+	private ProdutoRepository repository;
+
 	@GetMapping
-	public ResponseEntity<List<Tema>> getAll(){
+	public ResponseEntity<List<Produto>> GetAll() {
 		return ResponseEntity.ok(repository.findAll());
 	}
-	
+
 	@GetMapping("/{id}")
-	public ResponseEntity<Tema> getById(@PathVariable long id){
-		return repository.findById(id).map(resp -> ResponseEntity.ok(resp))
-				.orElse(ResponseEntity.notFound().build());
+	public ResponseEntity<Produto> GetById(@PathVariable long id) {
+		return repository.findById(id).map(resp -> ResponseEntity.ok(resp)).orElse(ResponseEntity.notFound().build());
 	}
-	
+
 	@GetMapping("/nome/{nome}")
-	public ResponseEntity<List<Tema>> getByName(@PathVariable String nome){
-		return ResponseEntity.ok(repository.findAllByDescricaoContainingIgnoreCase(nome));
+	public ResponseEntity<List<Produto>> GetByTitulo(@PathVariable String nome) {
+		return ResponseEntity.ok(repository.findAllByNomeContainingIgnoreCase(nome));
+
 	}
-	
+
 	@PostMapping
-	public ResponseEntity<Tema> post (@RequestBody Tema tema){
-		return ResponseEntity.status(HttpStatus.CREATED)
-				.body(repository.save(tema));
+	public ResponseEntity<Produto> post(@RequestBody Produto produto) {
+		return ResponseEntity.status(HttpStatus.CREATED).body(repository.save(produto));
+
 	}
 
 	@PutMapping
-	public ResponseEntity<Tema> put (@RequestBody Tema tema){
-		return ResponseEntity.ok(repository.save(tema));				
+	public ResponseEntity<Produto> put(@RequestBody Produto produto) {
+		return ResponseEntity.status(HttpStatus.OK).body(repository.save(produto));
+
 	}
-	
+
 	@DeleteMapping("/{id}")
 	public void delete(@PathVariable long id) {
 		repository.deleteById(id);
 	}
-	
+
+	/*
+	 * @PostMapping public String hello() { return "Hello World"; }
+	 */
 }
